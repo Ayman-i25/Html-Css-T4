@@ -137,8 +137,13 @@ header .nav ul{
     display: flex;
 }
 @media (max-width:992px){
+    header .nav:hover  .menu{
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s;
+    }
     header .nav ul{
-        display: none;
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         position: absolute;
@@ -150,12 +155,9 @@ header .nav ul{
         background: #f7f7f7;
         border-bottom: 4px solid #732be7;
         transition: all 0.5s;
+        opacity: 0;
     }
-    header .nav .fas:hover + ul{
-        top: 100%;
-        display: flex;
-        transition: all 0.5s;
-    }
+
 }
 @media (max-width:992px){
     header .nav ul li:not(:last-of-type){
@@ -742,8 +744,11 @@ header .icon span:hover{
 }
 .blog .box-holder .box{
     width: 30%;
-    margin: 30px 0 ;
+    margin: 20px 0;
     transition: 0.3s all ease-in-out;
+    background: #732be70f;
+    padding: 10px;
+    border-radius: 1rem;
 }
 
 .blog .box-holder .box:hover{
@@ -1014,32 +1019,32 @@ header .icon span:hover{
 }
 .contact-us .content .input-side form label{
     font-size: 14px;
-    margin: 10px 0;
+    margin-top: 10px;
 }
 .contact-us .content .input-side form .input{
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #9b9b9b;
     margin: 10px 0;
     width: 100%;
-    padding: 0 5px;
+    padding: 8px;
     outline: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
     display: block;
-    background: none;
+    background: #ffffffd4;
 }
 .contact-us .content .input-side form textarea{
     border: none;
     border-bottom: 1px solid black;
     margin: 10px 0;
-    padding: 0 5px;
+    padding: 8px;
     outline: none;
     min-width: 100%;
     min-height: 150px;
     resize: none;
     font-size: 15px;
     font-weight: bold;
-    background: none;
+    background: #ffffffd4;
 
 }
 .contact-us .content .input-side form .btn{
@@ -1053,6 +1058,7 @@ header .icon span:hover{
     margin: 20px ;
     transition: 0.3s all ease-in-out;
     border: none;
+    cursor: pointer;
 }
 .contact-us .content .input-side form .btn:hover{
     background-color: rgb(99, 39, 196);
